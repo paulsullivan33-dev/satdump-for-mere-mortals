@@ -1,0 +1,17 @@
+$ ls -la ~/.config/satdump/satdump_tles.txt
+(this file did not exist before the lab's first SatDump run; SatDump
+ downloaded fresh TLEs itself at first launch, through this machine's
+ ordinary HTTPS route)
+-rw-rw---- 1 root nogroup 2470063 Oct 31 02:29 /home/hatch/.config/satdump/satdump_tles.txt
+
+$ grep -m1 "Loading TLEs" -A1 <run3 log>
+[02:33:18 - 31/10/2026] (I) Loading TLEs from /home/hatch/.config/satdump/satdump_tles.txt
+[02:33:18 - 31/10/2026] (I) 15900 TLEs loaded!
+
+$ grep "requires projection info" <run1 log, the no-timestamp run> | sort | uniq -c
+      3 [02:30:19 - 31/10/2026] (E) This composite requires projection info
+
+$ grep -m3 "Skipping" <run1 log>   (composites APT cannot feed: it carries only 2 of the 5 AVHRR channels)
+[02:30:11 - 31/10/2026] (D) Skipping AVHRR 221 False Color as it can't be made!
+[02:30:11 - 31/10/2026] (D) Skipping AVHRR 3a21 False Color as it can't be made!
+[02:30:11 - 31/10/2026] (D) Skipping 4/221 Merge as it can't be made!

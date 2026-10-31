@@ -1,0 +1,28 @@
+site_name: SatDump for Mere Mortals
+site_description: A satellite data processor that turns radio recordings into weather images and data. Decoding a real NOAA weather satellite pass end to end, the pipeline catalogue counted from the program's own files, projections and orbital data, and live reception, with the limits stated plainly.
+site_url: https://paulsullivan33-dev.github.io/satdump-for-mere-mortals/
+copyright: 'Part of <a href="https://paulsullivan33-dev.github.io/mere-mortals/">For Mere Mortals</a> · Text CC BY 4.0, code MIT'
+
+# Guides live at the repo root (nice for GitHub browsing).
+# The deploy workflow copies them into docs/ before building.
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - What SatDump Is: what-satdump-is.md
+  - The Moving Parts: the-moving-parts.md
+  - Installing SatDump: installing-satdump.md
+  - Recordings First — Files In: recordings-first.md
+  - The Pipeline Catalogue: the-pipeline-catalogue.md
+  - Your First Decode: your-first-decode.md
+  - Reading the Pictures: reading-the-pictures.md
+  - Projections, Timestamps and Orbital Data: projections-and-orbital-data.md
+  - Beyond NOAA — Other Satellites: beyond-noaa.md
+  - Live Mode and the Graphical Interface: live-mode-and-the-gui.md
+  - Recipes: recipes.md
+  - The Neighbours: the-neighbours.md
+  - Limits: limits.md
+  - Troubleshooting: troubleshooting.md
+  - Glossary: glossary.md
+  - Writing Criteria: criteria.md

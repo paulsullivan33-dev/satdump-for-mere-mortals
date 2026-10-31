@@ -1,0 +1,38 @@
+$ ls run1/   (decode with NO timestamp given)
+APT-A.png
+APT-B.png
+AVHRR-2.png
+AVHRR-4.png
+avhrr_3_APT_channel_A.png
+avhrr_3_APT_channel_A_corrected.png
+avhrr_3_APT_channel_B.png
+avhrr_3_APT_channel_B_corrected.png
+dataset.json
+product.cbor
+raw_sync.png
+raw_unsync.png
+
+$ ls run3/   (same file, --satellite_number 19 --start_timestamp 1545511181)
+APT-A.png
+APT-B.png
+AVHRR-2.png
+AVHRR-4.png
+avhrr_3_rgb_10.8um_Thermal_IR.png
+avhrr_3_rgb_10.8um_Thermal_IR_corrected.png
+dataset.json
+product.cbor
+raw_sync.png
+raw_unsync.png
+
+$ md5sum run1/APT-A.png run3/APT-A.png   (base products are deterministic)
+c1756021d0b16436a2663977dca4b2be  run1/APT-A.png
+c1756021d0b16436a2663977dca4b2be  run3/APT-A.png
+
+$ cat run1/dataset.json   (timestamp -1 is SatDump for "unknown")
+{
+    "products": [
+        "."
+    ],
+    "satellite": "NOAA",
+    "timestamp": -1.0
+}

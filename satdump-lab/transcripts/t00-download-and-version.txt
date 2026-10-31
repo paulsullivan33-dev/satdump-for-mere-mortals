@@ -1,0 +1,29 @@
+$ curl -sL -O https://github.com/SatDump/SatDump/releases/download/1.2.2/satdump_1.2.2_ubuntu_24.04_amd64.deb
+$ ls -la satdump_1.2.2_ubuntu_24.04_amd64.deb
+37215796 /home/hatch/workspace/satdump-labwork/dl/satdump.deb
+$ sha256sum satdump_1.2.2_ubuntu_24.04_amd64.deb
+68672f0d1bb76d5646d02ad2cbbeaa7549bed5ecedf4ee27d0d8467e72cf3221
+(the 1.2.2 release publishes no checksum file; this hash is the lab's own, recorded so a reader can compare)
+
+$ dpkg-deb -f satdump_1.2.2_ubuntu_24.04_amd64.deb Package Version
+Package: satdump
+Version: 1.2.2
+
+$ dpkg-deb -x satdump_1.2.2_ubuntu_24.04_amd64.deb root/   (extract, not install: shared machine)
+$ ldd root/usr/bin/satdump | grep "not found"
+libsatdump_core.so => not found    (it is in root/usr/lib — an LD_LIBRARY_PATH entry fixes it)
+libnng.so.1 => not found           (fetched separately: Ubuntu package libnng1 1.7.2-1build2, also extracted)
+
+$ satdump noaa_apt audio_wav sample.wav out/   (first lines of any real run)
+[02:33:15 - 31/10/2026] (D) File is wav!
+[02:33:15 - 31/10/2026] (I)    _____       __  ____                      
+[02:33:15 - 31/10/2026] (I)   / ___/____ _/ /_/ __ \__  ______ ___  ____ 
+[02:33:15 - 31/10/2026] (I)   \__ \/ __ `/ __/ / / / / / / __ `__ \/ __ \
+[02:33:15 - 31/10/2026] (I)  ___/ / /_/ / /_/ /_/ / /_/ / / / / / / /_/ /
+[02:33:15 - 31/10/2026] (I) /____/\__,_/\__/_____/\__,_/_/ /_/ /_/ .___/ 
+[02:33:15 - 31/10/2026] (I)                                     /_/      
+[02:33:15 - 31/10/2026] (I) Starting SatDump v1.2.2
+[02:33:15 - 31/10/2026] (I) 
+[02:33:15 - 31/10/2026] (I) Loading config /usr/share/satdump/satdump_cfg.json
+[02:33:15 - 31/10/2026] (I) Loading user settings /home/hatch/.config/satdump/settings.json
+[02:33:15 - 31/10/2026] (I) Loading plugins from /usr/lib/satdump/plugins

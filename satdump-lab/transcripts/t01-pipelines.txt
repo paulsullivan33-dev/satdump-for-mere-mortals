@@ -1,0 +1,11 @@
+$ ls root/usr/share/satdump/pipelines/ | wc -l    (pipeline definition files)
+71
+
+$ count of pipeline ids across all files (top-level keys in each JSON)
+184
+
+$ pipeline ids in the families this guide leans on
+NOAA ['noaa_hrpt', 'noaa_gac', 'noaa_dsb', 'noaa_apt']
+Meteor-M ['meteor_hrpt', 'meteor_m2_lrpt', 'meteor_m2-x_lrpt', 'meteor_m2-x_lrpt_80k', 'meteor_m_mtvza_dump', 'meteor_m_kmss_qpsk_dump', 'meteor_m_kmss_bpsk_db']
+GOES ['goes_gvar', 'goes_hrit', 'goes_hrit_tcp', 'goes_grb', 'goesr_cda', 'goesr_cda_4k', 'goes_mdl', 'goes_lrit', 'goesn_cda', 'goesn_sounder', 'goesn_sd', 'goesr_raw']
+Others ['off2pro', 'generic_analog_demod', 'saral_l_band', 'angels_l_band', 'gazelle_l_band', 'yunhai_ahrpt', 'syracuse3b_tlm', 'scisat1_dump', 'CALIPSO', 'youthsat_dump', 'pretty_s_dump']

@@ -1,0 +1,20 @@
+recording length: 822.4 s -> expected APT lines ~1645
+APT-A.png                                        (909, 1643)    mode=I    min=      0 max=  65535 p1=    177 p99=  42899
+APT-B.png                                        (909, 1643)    mode=I    min=      0 max=  65535 p1=   4181 p99=  60898
+AVHRR-2.png                                      (909, 1643)    mode=I    min=      0 max=  65535 p1=    177 p99=  42899
+AVHRR-4.png                                      (909, 1643)    mode=I    min=      0 max=  65535 p1=   4181 p99=  60898
+avhrr_3_APT_channel_A.png                        (909, 1643)    mode=I    min=    614 max=  65535 p1=    656 p99=  64880
+avhrr_3_APT_channel_A_corrected.png              (909, 1643)    mode=I    min=    614 max=  65535 p1=    656 p99=  64880
+avhrr_3_APT_channel_B.png                        (909, 1643)    mode=I    min=    239 max=  65535 p1=    655 p99=  64880
+avhrr_3_APT_channel_B_corrected.png              (909, 1643)    mode=I    min=    239 max=  65535 p1=    655 p99=  64880
+raw_sync.png                                     (2080, 1643)   mode=I    min=      0 max=  65535 p1=      0 p99=  65535
+raw_unsync.png                                   (2080, 1643)   mode=I    min=      0 max=  65535 p1=   3571 p99=  60060
+
+dataset.json:
+{
+    "products": [
+        "."
+    ],
+    "satellite": "NOAA",
+    "timestamp": -1.0
+}
